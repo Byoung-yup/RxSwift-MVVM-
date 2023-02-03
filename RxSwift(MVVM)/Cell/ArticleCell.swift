@@ -53,7 +53,6 @@ class ArticleCell: UICollectionViewCell {
     func subscribe() {
         
         viewModel.subscribe { articleViewModel in
-            print("onNext")
             if let urlString = articleViewModel.element?.imageUrl {
                 self.imageView.sd_setImage(with: URL(string: urlString))
             }
